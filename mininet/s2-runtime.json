@@ -1,0 +1,27 @@
+{
+  "nat_table_entries": [ 
+    { 
+      "table": "MyIngress.dnat_table", 
+     "matches": {
+      "standard_metadata.ingress_port": 1,
+      "hdr.ipv4.dstAddr": ["10.20.0.0", 16]
+      }, 
+      "action_name": "MyIngress.rewrite_dst_prefix", 
+      "action_params": { 
+        "new_prefix": 2560 
+      }
+    },
+    { 
+      "table": "MyIngress.snat_table", 
+      "matches": { 
+        "standard_metadata.ingress_port": 2, 
+        "hdr.ipv4.srcAddr": ["10.0.0.0", 16] 
+        }, 
+        "action_name": "MyIngress.rewrite_src_prefix", 
+        "action_params": { 
+          "new_prefix": 2580 
+        } 
+      } 
+    ],
+  "multicast_group_entries": []
+}

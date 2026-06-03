@@ -1,0 +1,20 @@
+[
+  {
+    "switch_id": "s1",
+    "address": "127.0.0.1:50001",
+    "device_id": 1,
+    "p4file": "p4src/build/pat.json",
+    "p4info": "p4src/build/pat-p4info.txt",
+    "config_file": "mininet/s1-runtime.json",
+    "controller_type": "pat"
+  },
+  {
+    "switch_id": "s2",
+    "address": "127.0.0.1:50002",
+    "device_id": 1,
+    "p4file": "p4src/build/nat.json",
+    "p4info": "p4src/build/nat-p4info.txt",
+    "config_file": "mininet/s2-runtime.json",
+    "controller_type": "nat"
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "pat_table_entries": [
+    {
+      "table": "MyIngress.inside_ports",
+      "matches": {
+        "standard_metadata.ingress_port": 1
+      },
+      "action_name": "MyIngress.set_inside",
+      "action_params": {}
+    },
+    {
+      "table": "MyIngress.pat_out_cfg",
+      "matches": {
+        "standard_metadata.ingress_port": 1
+      },
+      "action_name": "MyIngress.pat_out",
+      "action_params": {
+        "public_ip": "192.168.10.2"
+      }
+    }
+  ],
+  "multicast_group_entries": []
+}
