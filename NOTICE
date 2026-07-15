@@ -1,0 +1,40 @@
+P4 NAT/PAT Network Simulation
+Copyright 2026 Taine (github.com/eniat)
+
+============================================================
+ORIGINAL WORK BY THE AUTHOR (ALL RIGHTS RESERVED)
+============================================================
+The following files are NOT licensed under Apache-2.0. All 
+rights are reserved. No permission is granted to copy, 
+redistribute, submit for academic assessment, or
+reuse them without prior written permission:
+
+  p4src/pat.p4
+  p4src/nat.p4
+  mininet/topo.py
+  mininet/flask_ip.py
+  mininet/s1-runtime.json
+  mininet/s2-runtime.json
+  controller.json
+  Makefile
+  docker-compose.yml
+  .devcontainer.json
+
+============================================================
+THIRD-PARTY WORK (APACHE LICENSE 2.0)
+============================================================
+This project incorporates and modifies code from the p4lang/tutorials
+project and TU Delft Embedded and Networked Systems Group, licensed
+under the Apache License, Version 2.0.
+
+  Copyright 2017-present Open Networking Foundation
+  Copyright 2019 Belma Turkovic, TU Delft ENS Group
+
+Files under util/ and proto/, and the files controller.py and
+mininet/stratum.py (modified derivatives), remain governed by the
+Apache License, Version 2.0. A copy is provided in the LICENSE file.
+Original upstream copyright notices have been retained in-file and
+must not be removed.
+
+Modifications to controller.py and mininet/stratum.py:
+  Copyright 2026 Taine Morton, licensed under Apache-2.0.
