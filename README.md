@@ -23,6 +23,25 @@ Two P4 switches sit between these networks:
 
 The home network uses private addresses behind `s1`. Outbound TCP/UDP traffic can be rewritten to a public-facing address. The web network sits behind `s2`, which rewrites configured IPv4 prefixes using source and destination NAT tables.
 
+## About this project
+
+Built on a provided P4Runtime skeleton (topology, Makefile, controller
+scaffolding and helper libraries). My work was implementing the NAT and PAT
+functionality on top of it:
+
+- **`p4src/pat.p4`** — the Port Address Translation data plane: outbound
+  source rewriting, CPU-punting and learning of unknown flows, return-path
+  translation, TCP/UDP handling, and static port forwarding.
+- **`p4src/nat.p4`** — the prefix-based NAT data plane: source/destination
+  NAT tables, ARP pass-through, and checksum recomputation after rewrites.
+- The flow-learning logic and REST API added inside the provided controller.
+
+## Licensing
+
+Published for viewing and portfolio review only, not licensed for reuse.
+See `NOTICE` for the breakdown of my additions, the provided skeleton, and
+third-party Apache-2.0 components, and `LICENSE` for the Apache-2.0 text.
+
 ## Main components
 
 ### PAT data plane
