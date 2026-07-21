@@ -6,11 +6,11 @@ PYTHONPATH := ./util/lib/
 
 P4RT_SH_IMG := p4lang/p4runtime-sh:latest
 P4C_IMG := opennetworking/p4c:latest
-STRATUM_BMV2_IMG := opennetworking/ngsdn-tutorial:stratum_bmv2
+STRATUM_BMV2_IMG := opennetworking/mn-stratum
 
 P4RT_SH_SHA := sha256:6ae50afb5bde620acb9473ce6cd7b990ff6cc63fe4113cf5584c8e38fe42176c
 P4C_SHA := sha256:8f9d27a6edf446c3801db621359fec5de993ebdebc6844d8b1292e369be5dfea
-STRATUM_BMV2_SHA := sha256:f31faa5e83abbb2d9cf39d28b3578f6e113225641337ec7d16d867b0667524ef
+STRATUM_BMV2_SHA := sha256:352323780adf642664895689b7d2350f2e0be24780420c84bb5aa437d7ac9315
 
 NGSDN_TOPO_PY := topo.py
 
