@@ -1,6 +1,6 @@
 {
-  "name": "scc_333/mininet",
-  "image": "scc-registry.lancs.ac.uk/teaching/scc_333/ken:25.1.6",
+  "name": "p4-networking/mininet",
+  "image": "opennetworking/mn-stratum",
   "workspaceMount": "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached",
   "workspaceFolder": "/workspace",
   "postCreateCommand": "sh -c /scripts/entrypoint.sh",
