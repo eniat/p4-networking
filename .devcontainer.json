@@ -1,43 +1,37 @@
 {
-  "name": "p4-networking/mininet",
-  "image": "opennetworking/mn-stratum",
-  "workspaceMount": "source=${localWorkspaceFolder}/,target=/workspace,type=bind,consistency=cached",
-  "workspaceFolder": "/workspace",
-  "postCreateCommand": "sh -c /scripts/entrypoint.sh",
-  "privileged": true,
-  "containerEnv": {
-    "DISPLAY": "${localEnv:DISPLAY}"
+  "name": "p4-networking",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/docker-in-docker:2": {}
   },
-
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": "pip install --user grpcio grpcio-tools protobuf flask scapy",
+  "forwardPorts": [5000, 50001, 50002, 50003, 50004],
   "customizations": {
     "vscode": {
       "extensions": [
-        // General Extensions
         "naumovs.color-highlight",
-        "spikespaz.vscode-smoothtype",
         "alefragnani.Bookmarks",
         "oderwat.indent-rainbow",
         "yzhang.markdown-all-in-one",
         "eamodio.gitlens",
         "mhutchie.git-graph",
         "gruntfuggly.todo-tree",
-        "mohsen1.prettify-json",
         "stkb.rewrap",
         "shardulm94.trailing-spaces",
-        // Python Extensions
         "ms-python.python",
         "ms-python.isort",
         "ms-python.autopep8",
         "1amchris.p4-language"
       ],
       "settings": {
-        // General Settings
         "files.eol": "\n",
         "files.autoSave": "onFocusChange",
         "editor.formatOnSave": true,
+        "[python]": { "editor.defaultFormatter": "ms-python.autopep8" },
         "rewrap.wrappingColumn": 80,
-        // Python Settings
-        "python.pythonPath": "/usr/bin/python3"
+        "python.defaultInterpreterPath": "/usr/local/bin/python"
       }
     }
   }
